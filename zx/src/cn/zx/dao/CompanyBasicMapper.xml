@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.zx.dao.CompanyBasicMapper">
+  <resultMap id="BaseResultMap" type="cn.zx.pojo.CompanyBasic">
+    <id column="B_id" jdbcType="INTEGER" property="b_id" />
+    <result column="company_name" jdbcType="VARCHAR" property="company_name" />
+    <result column="URL" jdbcType="VARCHAR" property="URL" />
+    <result column="company_id" jdbcType="INTEGER" property="company_id" />
+    <result column="slogan" jdbcType="VARCHAR" property="slogan" />
+    <result column="period" jdbcType="INTEGER" property="period" />
+    <result column="standard" jdbcType="INTEGER" property="standard" />
+    <result column="days" jdbcType="INTEGER" property="days" />
+    <result column="panel_point" jdbcType="INTEGER" property="panel_point" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+  </resultMap>
+  <!-- 查询企业基础信息 -->
+  <select id="selectBasic" resultMap="BaseResultMap">
+  	select B_id,b.company_id as company_id,URL,slogan,period,standard,days,panel_point,password,company_name from company_basic as b
+ 	inner join oi_company as c on c.company_id=b.company_id
+  	  where b.company_id=#{company_id}
+  </select>
+  <insert id="insertBasic" parameterType="CompanyBasic">
+  	INSERT INTO company_basic
+  	(company_id,URL,slogan,period,standard,days,panel_point,PASSWORD)
+  	  VALUES(#{company_id},#{URL},#{slogan},#{period},#{standard},#{days},
+  	  #{panel_point},#{password}
+  	  )
+  </insert>
+  
+  <!-- 修改企业基础信息 -->
+  <update id="updateBasicByID" parameterType="CompanyBasic">
+ 	 UPDATE company_basic 
+ 	 <set>
+ 	 	<if test="URL != null">
+ 	 		URL=#{URL},
+ 	 	</if>
+ 	 	<if test="slogan != null">
+ 	 		slogan=#{slogan},
+ 	 	</if>
+ 	 	<if test="period != 0">
+ 	 		period=#{period},
+ 	 	</if>
+ 	 	<if test="standard != 0">
+ 	 		standard=#{standard},
+ 	 	</if>
+ 	 	<if test="days != 0">
+ 	 		days=#{days},
+ 	 	</if>
+ 	 	<if test="panel_point != 0">
+ 	 		panel_point=#{panel_point},
+ 	 	</if>
+ 	 	<if test="password != null">
+ 	 		password=#{password},
+ 	 	</if>
+ 	 	<if test="company_id !=null">
+ 	 		company_id=#{company_id}
+ 	 	</if>
+ 	 </set>
+ 	 <where>
+ 	 	<if test="b_id !=null">
+ 	 		and b_id=#{b_id}
+ 	 	</if>
+ 	 	<if test="company_id !=null">
+ 	 		and company_id=#{company_id}
+ 	 	</if>
+ 	 </where>
+  </update>
+</mapper>

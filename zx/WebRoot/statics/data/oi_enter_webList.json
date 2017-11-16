@@ -1,0 +1,20 @@
+[
+  {
+    "oi_type":"oi_enter_weList",
+    "oi_type_id":12,
+    "weType":"测试",
+    "weTitle":"管理员",
+    "weNumber":"1",
+    "weID":"33306",
+    "sortNumber":"300"
+  },
+  {
+    "oi_type":"oi_enter_weList",
+    "oi_type_id":12,
+    "weType":"测试",
+    "weTitle":"管理员",
+    "weNumber":"1",
+    "weID":"33306",
+    "sortNumber":"300"
+  }
+]

@@ -1,0 +1,27 @@
+.chkImg img{
+	display:block;
+	width:5.2rem;
+	height:auto;
+	margin:3.12rem auto 0.96rem;
+	box-shadow:0 0 5px 5px rgba(0,0,0,.12);
+	border-radius:0.08rem;
+}
+.chk_font_1{
+	font-size:0.533333rem;
+	color:#13a3ff;
+	margin:0 auto 0.4rem;
+	text-align:center;
+}
+.chk_font_2{
+	font-size:0.32rem;
+	color:#bfbfbf;
+}
+.chk_font_3{
+	position:fixed;
+	bottom:0;
+	width:100%;
+	text-align:center;
+	left:0;
+	font-size:0.32rem;
+	color:#13a3ff;
+}

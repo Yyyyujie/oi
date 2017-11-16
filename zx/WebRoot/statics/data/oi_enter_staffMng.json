@@ -1,0 +1,22 @@
+[
+  {
+    "oi_type":"oi_enter_staffMng",
+    "oi_type_id":12,
+    "stuff_number":"辅助管理",
+    "stuff_name":"M4",
+    "stuff_tel":"6",
+    "stuff_eta":"6",
+    "stuff_quality":"6",
+    "stuff_check":"已通过"
+  },
+  {
+    "oi_type":"oi_enter_staffMng",
+    "oi_type_id":12,
+    "stuff_number":"辅助管理",
+    "stuff_name":"M4",
+    "stuff_tel":"6",
+    "stuff_eta":"6",
+    "stuff_quality":"6",
+    "stuff_check":"已通过"
+  }
+]

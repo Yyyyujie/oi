@@ -1,0 +1,1 @@
+$("#footer_def").load("statics/pages/footer.html");

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.zx.dao.TokenMapper">
+
+<select id="getToken" resultType="cn.zx.pojo.Access_token">
+        select * from company_weixin_access where company_id=#{company_id}
+    </select>
+    
+	<update id="updateToken" parameterType="cn.zx.pojo.Access_token">
+		INSERT INTO company_weixin_access (
+		company_id,access_token,expir_time) 
+		VALUES (#{company_id},#{access_token},#{expir_time}) 
+		ON DUPLICATE KEY UPDATE access_token=#{access_token};
+	</update>
+	
+	<select id="selectsetting" resultType="cn.zx.pojo.WeSetting">
+	 select company_id,appid,appsecret,token from wechat_setting
+	</select>
+	
+	
+	<select id="selesctopen"  resultType="cn.zx.pojo.Open">
+	select company_id,open_id from company_staffer
+	where user_id=#{user_id}
+	</select>
+	
+	<select id="selectTmpl" resultType="cn.zx.pojo.Tmpl">
+	select tmpl_id,company_id,title,serial,template_id
+	from wechat_tmpl where tmpl_id=#{tmpl_id}
+	</select>
+	
+	<update id="updatekeyword" parameterType="cn.zx.pojo.Tmpl">
+		update	wechat_tmpl set 
+		firstdata=#{firstdata},
+		keyword1=#{keyword1},
+		keyword2=#{keyword2},
+		keyword3=#{keyword3},
+		keyword4=#{keyword4},
+		keyword5=#{keyword5},
+		remark=#{remark},
+		update_time=NOW()
+		 where tmpl_id=#{tmpl_id}
+	
+	</update>
+	
+	<select id="selectkeyword" resultType="cn.zx.pojo.Tmpl">
+	select tmpl_id,company_id,firstdata,keyword1,keyword2,keyword3,
+	keyword4,keyword5,remark
+	from wechat_tmpl where tmpl_id=#{tmpl_id}
+	</select>
+	
+	<insert id="addTmpl" parameterType="cn.zx.pojo.Tmpl" >
+		insert into wechat_tmpl 
+				(company_id,template_id,create_time,update_time)
+		values(#{company_id},#{template_id},NOW(),NOW())
+	</insert>
+	
+	<update id="updateUrl" parameterType="cn.zx.pojo.Url">
+		INSERT INTO company_basic (
+		company_id,URL) 
+		VALUES (#{company_id},#{URL}) 
+		ON DUPLICATE KEY UPDATE URL=#{URL};
+	</update>
+	<select id="selectUrl" resultType="cn.zx.pojo.Url">
+		select company_id,Url from company_basic
+		where company_id=#{company_id}
+		
+		</select>
+</mapper>

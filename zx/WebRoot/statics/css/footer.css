@@ -1,0 +1,36 @@
+.footer .active2{
+    color: #13a3ff;
+}
+.footer a:active{
+	text-decoration: none;
+}
+.f-tu .active{
+    color: #13a3ff;
+}
+.fabu{
+    width:0.7rem;
+    height:1.27rem;
+    background-image: url("../img/icon.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom:0.12rem;
+    left:0;
+    right:0;
+    margin:auto;
+}
+.ic{
+    width:0.7rem;
+    height:0.7rem;
+    background:url("../img/ic.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top:0;
+    left:0;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}

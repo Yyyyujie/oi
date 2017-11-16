@@ -1,0 +1,133 @@
+._shade_box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+}
+
+._shade_box ._shade_c {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .7);
+  z-index: 300;
+}
+
+.filter_blur {
+  filter: blur(0.053333rem);
+  -webkit-filter: blur(0.053333rem);
+}
+
+._shade_box ._task_re_alert {
+  position: absolute;
+  top: 6.72rem;
+  left: 50%;
+  margin-left: -3.006667rem;
+  width: 6.013333rem;
+  height: 3.426667rem;
+  text-align: center;
+  background-color: #13a3ff;
+  border-top-left-radius: 0.16rem;
+  border-top-right-radius: 0.16rem;
+  z-index: 300;
+  border-radius: 0.16rem;
+}
+
+._task_re_alert ._al_top {
+  height: 0.653333rem;
+  position: relative;
+}
+
+._al_top:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -0.52rem;
+  margin-top: -0.52rem;
+  width: 1.04rem;
+  height: 1.04rem;
+  background: url(../images/icons/alert_item.png) no-repeat center center;
+  background-size: cover;
+}
+
+._task_re_alert ._al_content {
+  height: 2.786667rem;
+  border-radius: 0.16rem;
+  background-color: #fff;
+  color: #13a3ff;
+  font-size: 0.32rem;
+}
+
+._al_t1 {
+  padding: 0.506667rem 0 0.24rem;
+}
+
+._al_t2 {
+  font-size: 0.293333rem;
+  color:#13a3ff
+}
+
+._al_btns {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.36rem 0.28rem;
+}
+
+._al_btns:before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  content: "";
+  width: 4.44rem;
+  margin: -0.28rem 0 0 -2.22rem;
+  height: 0.28rem;
+  background: url(../images/icons/shadow.png) no-repeat center center;
+  background-size: 100%;
+}
+
+._al_btns ._al_button {
+  border:0 none;
+  width: 2.56rem;
+  height: 0.64rem;
+  line-height: 0.64rem;
+  text-align: center;
+  font-size: 0.373333rem;
+  color: #fff;
+  border-radius: 0.32rem;
+  background:#13a3ff;
+  outline:none;
+}
+._al_btns ._al_button._al_btn_block{
+  margin:0 auto;
+  width:90%;
+}
+._al_button._d {
+  background: #e3e3e3;
+  color: #333641;
+}
+
+/*图片预览部分*/
+._shade_box._pic_preview{
+  background-color:rgb(0,0,0);
+}
+._pic_preview .shade_img_preview{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  margin:0 auto;
+  z-index:301;
+  background:no-repeat center center;
+  background-size:contain;
+}

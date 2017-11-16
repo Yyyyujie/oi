@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.zx.dao.WechatSettingMapper">
+  <resultMap id="BaseResultMap" type="cn.zx.pojo.WechatSetting">
+    <id column="set_id" jdbcType="INTEGER" property="set_id" />
+    <result column="company_id" jdbcType="INTEGER" property="company_id" />
+    <result column="appid" jdbcType="VARCHAR" property="appid" />
+    <result column="appsecret" jdbcType="VARCHAR" property="appsecret" />
+    <result column="token" jdbcType="VARCHAR" property="token" />
+    <result column="site" jdbcType="VARCHAR" property="site" />
+    <result column="tixi" jdbcType="INTEGER" property="tixi" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="sortname" jdbcType="VARCHAR" property="sortname" />
+  </resultMap>
+  <select id="selectWechat" resultType="WechatSetting">
+  	SELECT set_id,company_id,appid,appsecret,token,sortname ,password
+  	FROM wechat_setting WHERE company_id=#{company_id}
+  </select>
+  <update id="updateWechatByID" parameterType="cn.zx.pojo.WechatSetting">
+  	update wechat_setting 
+  		<set>
+  		<if test="appid != null">
+  			appid=#{appid},
+  		</if>
+  		<if test="appsecret != null">
+  			appsecret=#{appsecret},
+  		</if>
+  		<if test="token != null">
+  			token=#{token},
+  		</if>
+  	</set>
+  	where set_id=#{set_id}
+  	
+  </update>
+  <insert id="insertWechatSet" parameterType="WechatSetting">
+  	INSERT INTO wechat_setting(company_id,appid,appsecret,token,site,tixi,PASSWORD,sortname)
+	VALUES(#{company_id},#{appid},#{appsecret},#{token},#{site},#{tixi},#{password},#{sortname})
+  </insert>
+</mapper>

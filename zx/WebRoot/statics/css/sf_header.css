@@ -1,0 +1,155 @@
+body{
+  padding-top:1.173333rem;
+  padding-bottom: 1.68rem;
+}
+.sf_header_bar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  text-align:center;
+	background:#13a3ff;
+     z-index: 999999999;
+}
+.__back_btn{
+  position:absolute;
+  left:0;
+  top:0;
+  width:1.173333rem;
+  height:1.173333rem;
+  background:no-repeat center center;
+  background-size: contain;
+}
+.header_bar_title{
+  color:#fff;
+  line-height:1.173333rem;
+  font-size:0.533333rem;
+}
+.sf_footer_bar{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:1.333333rem;
+  box-shadow:0 1px 5px 5px rgba(0,0,0,.12);
+  z-index:300;
+  background:#fff;
+}
+.sf_footer_bar ul{
+  padding:0 0.32rem;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.sf_footer_bar li a{
+  width:1.866667rem;
+  height:1.333333rem;
+  position:relative;
+  display:flex;
+  display:-webkit-flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+}
+.sf_footer_bar li a:after{
+  content:"";
+  position:absolute;
+  right:0;
+  top:0.373333rem;
+  height:0.64rem;
+  border-right:2px dotted #e4e4e4;
+}
+.sf_footer_bar ._ft_icon{
+  width:0.573333rem;
+  height:0.546667rem;
+  background:no-repeat center center;
+  background-size:contain;
+  margin-top:0.12rem;
+}
+.sf_footer_bar ._ft_icon._msg{
+  background-image:url(../images/icons/icon_msg.png);
+}
+.sf_footer_bar ._ft_icon._task{
+  width:0.453333rem;
+  height:0.573333rem;
+  margin-top:0.12rem;
+  background-image:url(../images/icons/icon_task.png);
+  background-size:contain;
+}
+.sf_footer_bar ._ft_icon._task+._ft_text{
+  margin-top:0.08rem;
+}
+.sf_footer_bar ._ft_icon._data{
+   width:0.56rem;
+  height:0.506667rem;
+  margin-top:0.133333rem;
+  background-image:url(../images/icons/icon_data.png);
+}
+.sf_footer_bar ._ft_icon._data+._ft_text{
+  margin-top:0.173333rem;
+}
+.sf_footer_bar ._ft_icon._per{
+  width:42px;
+  height:42px;
+  background-image:url(../images/icons/icon_person.png);
+}
+.sf_footer_bar ._ft_icon._per+._ft_text{
+  margin-top:0.146667rem;
+}
+._ft_text{
+  margin:0.16rem 0 0.2rem;
+  color:#c9c9c9;
+  font-size:0.32rem;
+}
+.sf_footer_bar ._release_btn{
+  position:relative;
+  width:1.933333rem;
+}
+.sf_footer_bar ._release_btn:after{
+  content:"";
+  position:absolute;
+  right:0;
+  top:0.373333rem;
+  height:0.64rem;
+  border-right:2px dotted #e4e4e4;
+}
+.sf_footer_bar ._release_btn a{
+  position:absolute;
+  bottom:0;
+  left:0;
+  margin-left:0.4808rem;
+  width:0.933333rem;
+  height:1.68rem;
+  background:url(../images/icons/icon_release.png) no-repeat center center;
+  background-size:contain;
+}
+.sf_footer_bar ._release_btn a:after,._last a:after{
+  display: none;
+}
+/*激活之后的样式*/
+.sf_footer_bar ._tap_on ._ft_icon._msg{
+  width:0.586667rem;
+  height:0.56rem;
+  margin-left:0.04rem;
+  background-image:url(../images/icons/icon_msg_on.png);
+}
+[ft-type="task"] ._ft_icon._task{
+  background-image:url(../images/icons/icon_task_on.png);
+}
+[ft-type="data"] ._ft_icon._data{
+  width:0.56rem;
+  height:0.573333rem;
+  background-image:url(../images/icons/icon_data_on.png);
+}
+[ft-type="data"] ._ft_icon._data+._ft_text{
+  margin-top:0.106667rem;
+  color:#13a3ff;
+}
+[ft-type="task"] ._ft_icon._task+._ft_text{
+  margin-top:0.066667rem;
+  color:#13a3ff;
+}
+.sf_footer_bar ._tap_on ._ft_icon._per{
+  background-image:url(../images/icons/icon_person_on.png);
+}
+

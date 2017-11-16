@@ -1,0 +1,18 @@
+[
+  {
+    "oi_type":"oi_enter_grade",
+    "oi_type_id":12,
+    "state":false,
+    "grade_info":"辅助管理",
+    "grade_name":"辅助管理",
+    "grade_sort":"100"
+  },
+  {
+    "oi_type":"oi_enter_grade",
+    "oi_type_id":12,
+    "state":false,
+    "grade_info":"辅助管理",
+    "grade_name":"辅助管理",
+    "grade_sort":"100"
+  }
+]

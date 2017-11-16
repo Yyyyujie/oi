@@ -1,0 +1,302 @@
+a {
+  color: #666;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+  visibility: hidden;
+}
+
+.weui-navbar {
+  position: fixed;
+  max-width: 1024px;
+}
+
+.weui-textarea {
+  background-color: #fff;
+}
+
+.form_submit_button {
+  padding: 15px;
+}
+
+.weui-btn_primary:not(.weui-btn_disabled):active {
+  color: hsla(0, 0%, 100%, .6);
+  background-color: #092f50;
+}
+
+.form_submit_button .weui-btn {
+  width: 80%;
+  color: hsla(0, 0%, 100%, .8);
+  background-color: #2a76ad;
+}
+
+.weui-media-box_appmsg .weui-media-box__hd {
+  width: 77px;
+  height: 77px;
+  line-height: 77px;
+  background-color: #ddd;
+}
+
+.font_strong {
+  color: #333;
+  font-weight: 600;
+}
+
+.stuff_info_list .weui-panel__bd {
+  border-top: 1px solid #e5e5e5;
+}
+
+.stuff_container {
+  margin-bottom: 26.545%;
+}
+
+.task_list_container {
+  text-align: center;
+  margin-top: 0;
+}
+
+.task_list_container li {
+  float: none;
+  display: inline-block;
+}
+
+.staff_bottom_fixed {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+#stuff_info_busCard {
+  background-color: #333;
+}
+
+.stuff_box_1 {
+  margin: 5em auto 0;
+  width: 80%;
+  padding: 20px;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+.stuff_title_01 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-align-items: center;
+}
+
+.sf_head_icon {
+  width: 60px;
+  height: 60px;
+  background: no-repeat center center;
+  background-size: cover;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  margin-right: .8em;
+}
+
+.sf_head_title {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  flex: 1;
+  min-width: 0;
+}
+
+.sf_head_title small {
+  color: #999;
+}
+
+.sf_arCodeIcon {
+  width: 85%;
+  margin: 20px auto;
+  padding-bottom: 85%;
+  background: no-repeat center center;
+  background-size: 100%;
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.6);
+}
+
+#sfContractBox .weui-media-box__info__meta.font_strong {
+  padding-right: 0;
+}
+
+#sf_tsk_backlog > a {
+  display: block;
+}
+
+#sf_tsk_backlog .weui-media-box:first-child:before {
+  display: block;
+}
+
+/*任务状态*/
+[task-status] {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, .24);
+}
+
+[task-status] .oi_sf_tsk_tips:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 12px;
+  padding: 0 .6em;
+  border-radius: 3px;
+  background-color: #fff;
+  transform: rotate(25deg);
+  box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+[task-status="1"] .oi_sf_tsk_tips:after {
+  content: "取消";
+  color: #736969;
+  border: 2px solid #736969;
+}
+
+[task-status="2"] .oi_sf_tsk_tips:after {
+  content: "完成";
+  color: #3ab44f;
+  border: 2px solid #3ab44f;
+}
+
+[task-status="3"] .oi_sf_tsk_tips:after {
+  content: "退回";
+  color: #f00;
+  border: 2px solid #f00;
+}
+
+[task-status="4"] .oi_sf_tsk_tips:after {
+  content: "进行";
+  color: #ff960d;
+  border: 2px solid #ff960d;
+}
+
+[task-status="5"] .oi_sf_tsk_tips:after {
+  content: "待接";
+  color: #7ea8c4;
+  border: 2px solid #7ea8c4;
+}
+
+[task-status="6"] .oi_sf_tsk_tips:after {
+  content: "待评";
+  color: #999;
+  border: 2px solid #666;
+}
+
+[data-vote] .weui-slider {
+  padding-left: 0;
+}
+
+[data-vote] .weui-media-box__info {
+  margin-top: 0;
+}
+
+.weui-search-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 1024px;
+  margin-top: 50px;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
+}
+
+.weui-search-bar + .weui-tab .weui-tab__bd {
+  padding-top: 94px;
+}
+.evaluate .weui-panel_access{
+  box-shadow:1px 0 5px 2px rgba(0,0,0,.25);
+}
+.star_evaluate{
+  width:95%;
+  overflow:hidden;
+  margin:15px auto 20px;
+  padding:25px 0 25px;
+  box-shadow:1px 2px 4px 2px rgba(0,0,0,0.18);
+  border-radius:3px;
+  position:relative;
+}
+
+.star_evaluate:before{
+  position:absolute;
+  top:0;
+  right:0;
+  padding:0 5px;
+  color:#333;
+  font-size:12px;
+  border:2px solid #333;
+  border-radius:3px;
+  transform:rotate(25deg);
+  box-shadow:1px 1px 4px 1px rgba(0,0,0,.4);
+}
+#eta_check:before{
+  content:"效率";
+  border-color: #1b80aa;
+  color:#1b80aa;
+}
+#quality_check:before{
+  content:"质量";
+  border-color: #21aa65;
+  color:#21aa65;
+}
+.star_evaluate ul{
+  list-style:none;
+  text-align: center;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+}
+.star_evaluate li{
+  width:20px;
+  height:20px;
+  margin:0 5px;
+  background-color:#666;
+}
+.star_evaluate .star{
+  background:url(../images/icons/star.png) no-repeat 0 0;
+}
+.star_evaluate .star.good{
+  background-position:-30px 0;
+}
+.classify-box{
+  display:block;
+  border:0 none;
+  background: rgba(255,255,255, 0.4) url(../images/icons/icon_nav_form.png) center center;
+  background-size:100%;
+  outline:none;
+  margin-left:5px;
+}
+.page__category-content{
+  position:fixed;
+  top:0;
+  right:0;
+  width:100%;
+  z-index:20;
+  margin-top:94px;
+  box-shadow:0 2px 5px 2px rgba(0,0,0,.25);
+}
+.weui-navbar+.weui-tab__bd {
+    padding-top: 94px;
+}
+#oi_sf_msg_container .weui-navbar+.weui-tab__bd {
+    padding-top: 50px;
+}
+/*任务状态 结束*/
+@media (min-width: 768px) {
+  body {
+    width: 1024px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .stuff_box_1 {
+    width: 50%;
+  }
+}

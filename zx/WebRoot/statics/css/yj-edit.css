@@ -1,0 +1,46 @@
+
+.phone{
+    width:100%;
+    height:2.75rem;
+    position: relative;
+    margin-top: 0.95rem;
+}
+.phone1{
+    width:0.96rem;
+    height:1.76rem;
+    background: url("../img/yj-phone.png");
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    margin:auto;
+    text-align: center;
+    line-height: 1.76rem;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.call{
+    font-size: 0.34rem;
+    text-align: center;
+}
+.but{
+    width:4.82rem;
+    height:2.88rem;
+    margin:0 auto;
+    padding-top:1.06rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.look,.change{
+    width:100%;
+    height:0.7rem;
+    background: #13a3ff;
+    border-radius: 0.7rem;
+    text-align: center;
+    line-height: 0.7rem;
+    color: #fff;
+    font-size: 0.28rem;
+}

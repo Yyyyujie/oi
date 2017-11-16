@@ -1,0 +1,20 @@
+[
+  {
+    "oi_type":"oi_enter_rank",
+    "oi_type_id":12,
+    "rank_to_grade":"辅助管理",
+    "rank_name":"M4",
+    "rank_level":"6",
+    "rank_info":"6",
+    "rank_sort":"6"
+  },
+  {
+    "oi_type":"oi_enter_rank",
+    "oi_type_id":12,
+    "rank_to_grade":"辅助管理",
+    "rank_name":"M4",
+    "rank_level":"6",
+    "rank_info":"6",
+    "rank_sort":"6"
+  }
+]

@@ -1,0 +1,156 @@
+main{
+	position: absolute;
+	top: 1.173333rem;
+	bottom: 1.333333rem;
+	left: 0;
+	right: 0;
+	padding: 0 0.32rem;
+}
+.person{
+	width: 100%;
+	height: 4.16rem;
+	    padding-top: 0.013333rem;
+}
+.me-header{
+	width: 1.933333rem;
+    height: 1.933333rem;
+    background: #3ecbff;
+    border: 0.08rem solid #a1e5ff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: 0.373333rem;
+    position: relative;
+        overflow: hidden;
+}
+.me-name{
+	font-size: 0.373333rem;
+    font-weight: bold;
+    line-height: 0.8rem;
+    text-align: center;
+}
+.me-zz{
+	font-size:0.266667rem
+    color: #999;
+    text-align: center;
+    line-height: 0.586667rem
+}
+.me-grade{
+	width: 9.346667rem;
+    height: 1.36rem;
+    margin: 0.333333rem auto 0;
+    padding-left: 1.04rem;
+    padding-right: 1.16rem;
+    border-radius: 0.106667rem;
+    -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, .12);
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, .12);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: -webkit-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    margin-bottom: 0.426667rem;
+}
+.grade-left{
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: -webkit-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+.grade-mid{
+	width: 0.053333rem;
+    height: 1.266667rem;
+    background: url(../images/icons/_ev_shadow.png) no-repeat center center;
+    background-size: contain;
+}
+.grade-num{
+	    font-size: 0.666667rem;
+    color: #333641;
+    margin-right: 0.24rem;
+}
+.grade-txt{
+	color: #333641;
+}
+.mark{
+	    font-size: 0.32rem;
+	    text-align: center;
+}
+.mark1{
+	font-size: 0.266667rem;
+}
+.fenlei{
+	width: 100%;
+    height: 1.36rem;
+    background: #fff;
+    border-radius: 0.133333rem;
+    -webkit-box-shadow: 0px 0px 12px 2px rgba(183, 178, 178, 0.24);
+    -moz-box-shadow: 0px 0px 12px 2px rgba(183, 178, 178, 0.24);
+    box-shadow: 0px 0px 12px 2px rgba(183, 178, 178, 0.24);
+    margin-bottom: 0.16rem;
+    display: flex;
+    align-items: center;
+    padding-left: 0.28rem;
+}
+.fenlei a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.icon{
+	    width: 0.746667rem;
+    height: 0.746667rem;
+    border-radius: 50%;
+    line-height: 0.746667rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.386667rem;
+    border:0.026667rem solid #13a3ff;
+}
+.icon i{
+	    display: inline-block;
+    font-size: 0.373333rem;
+    color: #13a3ff;
+}
+.fenlei span{
+	font-size: 0.373333rem;
+    color: #13a3ff;
+    font-weight: bold;
+}
+.jsicon{
+	width:0.4rem;
+    height: 0.4rem;
+    background: url(../images/jsicon.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.footer-me{
+	background: url(../images/icons/icon_person_on.png) no-repeat;
+}
+ footer .footer-me-zi{
+	color:#13a3ff;
+}
+.footer-msg{
+	background: url(../images/icons/icon_msg.png) no-repeat;
+}
+footer .footer-msg-zi{
+	color:#c9c9c9;
+}

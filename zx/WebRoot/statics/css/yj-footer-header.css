@@ -1,0 +1,112 @@
+body,html{
+	width: 100%;
+	height: 100%;
+	background:#fff;
+}
+a{
+}
+/*头部*/
+header{
+	width: 100%;
+	height: 1.173333rem;
+	background: #13a3ff;
+	position: fixed;
+	top: 0;
+	text-align: center;
+}
+.header-title{
+	font-size: 0.533333rem;
+	color: #fff;
+line-height:1.173333rem;
+}
+/*头部结束*/
+
+/*底部开始*/
+footer,.footer{
+	position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.333333rem;
+    box-shadow: 0 1px 3px 3px rgba(0,0,0,.12);
+    z-index: 300;
+    background: #fff;
+}
+footer ul{
+	width: 100%;
+	height: 100%;
+	padding: 0 0.32rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+footer ul li{
+	position:relative;
+}
+footer ul li a{
+	display:block;
+	width: 0.64rem;
+    height: 1.333333rem;
+    position: relative;
+    background-size: contain;
+    background-position: center;
+}
+footer .footer-icon{
+	width: 0.573333rem;
+    height: 0.546667rem;
+    background-size: contain;
+    margin-top: 0.12rem;
+    background-position: center;
+}
+.li-msg{
+	background: url(../images/footer/msg_on.png) no-repeat;
+	 background-size: contain;
+    background-position: center;
+}
+.li-task{
+	background: url(../images/footer/task.png) no-repeat;
+	 background-size: contain;
+    background-position: center;
+}
+.li-me{
+	background: url(../images/footer/me.png) no-repeat;
+	 background-size: contain;
+    background-position: center;
+}
+.li-data{
+	background: url(../images/footer/data.png) no-repeat;
+	 background-size: contain;
+    background-position: center;
+}
+footer .footer-zi{
+	    margin: 0.16rem 0 0.2rem;
+    color: #c9c9c9;
+    font-size: 0.32rem;
+}
+footer .footer-msg-zi{
+	color: #13a3ff;
+}
+.li-release{
+	position: relative;
+}
+.li-release-on{
+   	width: 1.386667rem;
+    height: 1.466667rem;
+    background: url(../images/footer/release.png) no-repeat center center;
+    background-size: contain;
+    margin-top: -0.133333rem;
+}
+/* footer .li-a:after,footer .li-release:after{
+	
+	    content: "";
+    position: absolute;
+    right: 0;
+    top: 0.373333rem;
+    height: 0.64rem;
+    border-right: 2px dotted #e4e4e4;
+} */
+
+.li-release-on:after{
+	    top: 0.373333rem;
+}
+/*底部结束*/

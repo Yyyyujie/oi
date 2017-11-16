@@ -1,0 +1,20 @@
+[
+  {
+    "oi_type":"ad_enter_check",
+    "oi_type_id":12,
+    "state":false,
+    "creditCode":"测试",
+    "manager":"管理员",
+    "phone":"测试",
+    "audit":"待审核"
+  },
+  {
+    "oi_type":"ad_enter_check",
+    "oi_type_id":12,
+    "state":false,
+    "creditCode":"测试",
+    "manager":"管理员",
+    "phone":"测试",
+    "audit":"待审核"
+  }
+]

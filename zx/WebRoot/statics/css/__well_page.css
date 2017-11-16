@@ -1,0 +1,79 @@
+body,html{
+  margin:0;
+  height:100%;
+  background-color:#000;
+}
+.swiper-container,#oiWellContainer,.swiper-slide{
+  width:100%;
+  height:100%;
+}
+.swiper-slide{
+  background:no-repeat center center;
+  background-size:cover;
+}
+.page_text{
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  text-align:center;
+  color:#eee;
+  font-size:14px;
+  text-shadow:0 0 5px rgba(0,0,0,.8);
+  display:none;
+}
+.oi_well_text{
+  font-size:16px;
+  color:#fff;
+  padding:0 5px;
+  font-family:"Microsoft Yahei",sans-serif;
+}
+[slideTop="true"] .page_text{
+  display:block;
+  animation:slideTop ease .8s 1;
+}
+#oiWellContainer .oi_wel_btn_go{
+	display: block;
+    width: 160px;
+    height: 50px;
+  position:absolute;
+  top:70%;
+ left: 0;
+    right: 0;
+    margin: auto;
+  padding:5px 15px;
+  text-align:center;
+  color: #13a3ff;
+  border-radius:8px;
+ /*  box-shadow:0 0 5px 5px rgba(255,255,255,.24); */
+  background:url(../images/icons/welcon.png) no-repeat;
+  background-position: center;
+    background-size: 100%;
+  text-decoration:none;
+  cursor:pointer;
+  line-height:50px;
+}
+  
+}
+.time{
+	    width: 40px;
+    height: 22px;
+    background: rgba(214, 213, 213, 0.5);
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 22px;
+}
+
+@keyframes slideTop{
+  0%{
+    opacity:0;
+    transform:translateY(50px);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0);
+  }
+}

@@ -1,0 +1,114 @@
+{
+    "code": 100,
+    "extend": {
+        "month": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+        ],
+        "Radar": [
+            {
+                "max": 4,
+                "name": "质量"
+            },
+            {
+                "max": 4.5,
+                "name": "效率"
+            },
+            {
+                "max": 5,
+                "name": "学习"
+            },
+            {
+                "max": 3.5,
+                "name": "创新"
+            },
+            {
+                "max": "3.4000",
+                "name": "领导"
+            },
+            {
+                "max": "3.20",
+                "name": "沟通"
+            }
+        ],
+        "staffer": {
+            "audit": 1,
+            "company_id": 1,
+            "company_name": "啧啧啧",
+            "depart": 1,
+            "dept_name": "测试公\n司",
+            "efficiencyavg": 0,
+            "face": "statics\\face\\1509587069913_Personal.jpeg",
+            "header": "http://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLp0b03G8ZObaib7YNuYibUpsZ3e8G5icw2kAFMe7f9dyngeOUCpytwBefnSQ241ElxV2zA3OBbAv18w/0",
+            "last_ip": "192.168.1.125",
+            "last_time": "2017-11-02 14:42:32",
+            "level_name": "M1",
+            "nickname": "Never Give Up ",
+            "open_id": "omwHk0XBWPYGZejmf2GKSkmTmg28",
+            "phone": "18636613370",
+            "post": 1,
+            "post_name": "董事\n长",
+            "postlevel": 1,
+            "qualityavg": 0,
+            "realname": "超哥",
+            "reg_ip": "59.49.103.74",
+            "reg_time": "2017-10-12 17:58:19",
+            "status": 1,
+            "user_id": 1
+        },
+        "count": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            8,
+            0,
+            0
+        ],
+        "carry": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0
+        ],
+        "complete": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0
+        ]
+    },
+    "msg": "处理成功！"
+}
+   

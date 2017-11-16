@@ -1,0 +1,150 @@
+
+
+/*main*/
+main{
+	position: absolute;
+	top: 1.173333rem;
+	bottom: 1.333333rem;
+	left: 0;
+	right: 0;
+}
+/*搜索框*/
+.msg-searchBox{
+	width: 8.266667rem;
+    border: 0.026667rem solid #13a3ff;
+    border-radius: 100px;
+    margin: 0.266667rem auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0.266667rem;
+    margin: auto;
+}
+.msg-searchBox [type="search"]{
+	
+	padding: 0.233333rem 0.333333rem;
+    font-size: 0.32rem;
+    color: #333641;
+    border: 0 none;
+    width: 92%;
+    height: 0.9rem;
+}
+.ss{
+	width: 0.5rem;
+    height: 0.5rem;
+    background: url(../img/ss.png) no-repeat;
+    position: absolute;
+    right: 0.3rem;
+    top: 0.2rem;
+    background-position: center;
+    background-size: 100%;
+}
+[isLoading="true"]:after{
+	position:absolute;
+	left:0;
+	bottom: -1.2rem;
+	width:100%;
+	content:"加载中···";
+	text-align:center;
+	color:#666;
+	font-size:0.35rem;
+	font-weight: 700;
+	color: #777;
+}
+/*搜索框结束*/
+/*公告开始*/
+
+.main{
+	width: 100%;
+	height: auto;
+	padding: 0.32rem;
+	position: absolute;
+    top: 1.4rem;
+    bottom: 0rem;
+        overflow-y: scroll;
+}
+.main ul li{
+	width: 9.36rem;
+	height: 1.866667rem;
+	background:#fff;
+	border-radius: 0.106667rem;
+	box-shadow: 0 0 5px 2px rgba(0, 0, 0, .12);
+	margin-bottom: 0.16rem;
+	margin: 0 auto 0.16rem;
+}
+.main ul li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 0 0.16rem;
+}
+main .li-header{
+	position: relative;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    float: left;
+    margin-top: 0.32rem;
+}
+.li-header img{
+	width:100%;
+	height:100%;
+}
+main .li-con{
+	margin-left: 0.106667rem;
+    float: left;
+    padding: 0.1rem 0;
+    position: relative;
+    height: 100%;
+}
+main .li-conTitle{
+	color: #333641;
+    font-size: 0.346667rem;
+    line-height: 0.6rem;
+    padding-left: 0.266667rem;
+}
+main .li-conCon{
+	    padding-left: 0.266667rem;
+}
+main .li-conCon,main .li-conCon *{
+	width: 6.2rem;
+    /* height: 0.66rem; */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #b3b3b3;
+    font-size: unset;
+    line-height: 0.5rem;
+}
+.li-conCon p{
+	width: 100%;
+}
+.li-conTitle p{
+	color:#333641;
+}
+main .li-conCon img{
+	display:none;
+}
+main .li-conTime{
+	height: 0.586667rem;
+    padding-left: 0.266667rem;
+    color: #d5d5d5;
+    font-size: 0.24rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+}
+main .li-conTime .time,main .li-conTime .look{
+	font-size: 0.266667rem;
+        color: #d4d4d4;
+    margin-right: 0.573333rem;
+}
+main .time span,main .look span{
+	color: #d5d5d5;
+}
+/*公告结束*/

@@ -1,0 +1,165 @@
+body,html{
+	position:relative;
+	/*加上高度避免transform对定位元素的影响，有transform属性的元素相当于有relative效果	*/
+	height:100%; 
+}
+/*页面logo部分*/
+.sf_logo_1{
+  padding:4.0rem 0 0.933333rem;
+}
+.sf_logo_1 img{
+  display:block;
+  width:1.92rem;
+  height:1.92rem;
+  margin:0 auto;
+}
+/*页面logo部分 结束*/
+.oi_form_reg input::-webkit-input-placeholder{
+	color:#bdbdbd;
+}
+.oi_form_reg{
+	width:8.32rem;
+	height:2.786667rem;
+	margin:0 auto;
+	padding:0 0.466667rem;
+	border-radius:0.08rem;
+	box-shadow:0 0 10px 4px rgba(0,0,0,0.12);
+  position:relative;
+}
+.oi_form_reg input{
+	border:0 none;
+	font-size:0.32rem;
+	padding:0.32rem 0;
+	outline: none;
+	width:80%;
+}
+.oi_tel{
+	height:1.413333rem;
+	border-bottom:1px dashed #e4e4e4;
+}
+.oi_tel input{
+	margin-top:0.3rem;
+}
+.oi_veri_code .send_btn{
+	float:right;
+	color:#bdbdbd;
+	margin-top:0.32rem;
+	font-size:0.32rem;
+	line-height:1.3055;
+}
+.send_btn.send_btn_on{
+	color:#13a3ff;
+}
+.form_input{
+  position:relative;
+}
+.errorTips{
+  position:absolute;
+  right:0;
+  bottom:0.426667rem;
+	color:#ff1356;
+	font-size:0.32rem;
+	height:0.373333rem;
+	line-height:0.373333rem;
+  padding-right:0.466667rem;
+  display:none;
+}
+.errorTips:after{
+  content:"";
+  position:absolute;
+  right:0;
+  top:-0.013333rem;
+  width:0.373333rem;
+  height:0.373333rem;
+  background:url(../images/icons/_status_important.png) no-repeat center center;
+  background-size:contain;
+}
+.oi_form_reg_box .sf_submit_button{
+	display:block;
+	margin:1.906667rem auto 0;
+	width:6.4rem;
+	height:0.96rem;
+	line-height:0.96rem;
+	text-align:center;
+	color:#fff;
+	border-radius:200px;
+	border:0 none;
+	font-size:0.373333rem;
+	transition:all .3s linear;
+	background:#13a3ff;
+  cursor:pointer;
+}
+/*按钮禁用之后的样式*/
+.oi_form_reg_box .sf_submit_button:disabled{
+	background:#d3d3d3;
+}
+.footer_container{
+	position:fixed;
+	bottom:0.666667rem;
+	left:0;
+	width:100%;
+	text-align:center;
+}
+.footer_container a{
+	color:#13a3ff;
+	font-size:0.32rem;
+}
+.form_forget{
+  position:absolute;
+  bottom:-0.986667rem;
+  right:0;
+}
+.form_forget a{
+  float:right;
+  color:#bdbdbd;
+  font-size:0.32rem;
+}
+.oi_veri_code input{
+  width:40%;
+}
+/*欢迎页*/
+.__welPage{
+  width:100%;
+  height:100%;
+  padding-top: 2.5rem;
+  overflow:hidden;
+  background:no-repeat center center;
+  background-size:cover;
+  margin:0 auto;
+}
+.__welHeader{
+  width:2.293333rem;
+  height:2.68rem;
+  background:no-repeat center center;
+  background-size:100%;
+  margin:0 auto;
+  position:relative;
+  transform:translateX(-0.186667rem);
+}
+.__welHeader .header_image{
+  position:absolute;
+  top:0.533333rem;
+  right:0.16rem;
+  width:1.613333rem;
+  height:1.613333rem;
+  border-radius:50%;
+  background:no-repeat center center;
+  background-size:cover;
+}
+.__wel_text{
+  margin-top:0.666667rem;
+  text-align:center;
+  color:#fff;
+  font-size:0.373333rem;
+  text-shadow: 0 2px 5px rgba(0,0,0,.4);
+  position:absolute;
+  left:0;
+  right:0;
+  margin:auto;
+  bottom:4rem;
+}
+.__wel_text span{
+	font-size:0.4rem;
+	 font-weight: bold
+}
+/*欢迎页 结束*/

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.zx.dao.DataEchartMapper">
+  <resultMap id="BaseResultMap" type="cn.zx.pojo.DataEchart">
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="name_b" jdbcType="VARCHAR" property="name_b" />
+    <result column="value" jdbcType="INTEGER" property="value" />
+    <result column="value_b" jdbcType="INTEGER" property="value_b" />
+  </resultMap>
+  <select id="type_count" resultMap="BaseResultMap">
+  SELECT t.type_name AS name,COUNT(c.type_id) AS value FROM oi_company AS  c
+	INNER JOIN oi_type AS t ON c.`type_id`=t.`type_id`
+	GROUP BY c.type_id
+  </select>
+<select id="district_count" resultMap="BaseResultMap">
+  SELECT d.district AS name,COUNT(c.pro_id) AS value FROM oi_company AS  c
+INNER JOIN oi_district AS d ON d.district_id=c.`pro_id`
+GROUP BY c.pro_id
+  </select>
+<select id="task_count" resultMap="BaseResultMap">
+SELECT 
+company_name AS name,
+SUM(CASE WHEN task_status=2 THEN 1 ELSE 0 END) AS value,
+SUM(CASE WHEN task_status=5 THEN 1 ELSE 0 END) AS value_b
+FROM company_task,oi_company
+WHERE oi_company.company_id=company_task.company_id
+GROUP BY company_task.company_id
+  </select>
+    <select id="staff_task_dept_sum" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  SELECT 
+  d.dept_id as value,
+  dept_name as name, 
+  SUM(1) as value_b
+  FROM company_task AS t
+ LEFT JOIN company_staffer AS s ON t.to_user=s.user_id
+ LEFT JOIN company_depart AS d ON d.dept_id=s.depart
+ WHERE 
+ s.company_id=#{company_id}
+ GROUP BY depart
+  </select>
+  <select id="get_task_staff_bydept"  parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    SELECT 
+ to_user AS VALUE,
+  realname AS NAME, 
+  SUM(1) AS value_b
+  FROM company_task AS t
+ LEFT JOIN company_staffer AS s ON t.to_user=s.user_id
+ WHERE 
+depart=#{dept_id}
+ GROUP BY to_user
+  </select>
+  
+  <select id="get_task_byuserid"  parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    SELECT task_status AS value_b,
+	COUNT(1) AS VALUE
+	FROM company_task 
+	WHERE to_user=#{user_id}
+	GROUP BY task_status
+  </select>
+  <select id="staff_task_sum" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+ SELECT 
+ IFNULL(SUM(task_quality),0) AS VALUE, 
+ IFNULL(SUM(task_efficiency),0) AS value_b 
+ FROM company_task 
+ WHERE to_user=#{user_id}
+  </select>
+  <!-- 根据状态选 -->
+  <select id="DataCenterFirst" parameterType="java.util.Map" resultMap="BaseResultMap">
+ SELECT 
+ COUNT(1) AS VALUE
+ FROM company_task AS t
+ LEFT JOIN company_staffer AS s ON t.to_user=s.user_id
+ WHERE depart in 
+  <foreach item="item" index="index" collection="depts" open="(" separator="," close=")">  
+  #{item}  
+  </foreach>  
+ AND task_status IN
+  <foreach item="status" index="index" collection="task_status" open="(" separator="," close=")">  
+   #{status}  
+  </foreach> 
+</select>
+
+<select id="DataCenterLoop2"  parameterType="java.util.Map" resultType="java.lang.Integer">
+   SELECT 
+  IFNULL(count(task_id),0) 
+  FROM company_depart AS d
+ LEFT JOIN  company_staffer AS s ON d.dept_id=s.depart
+ LEFT JOIN company_task AS t ON t.to_user=s.user_id
+ WHERE depart in 
+  <foreach item="item" index="index" collection="depts" open="(" separator="," close=")">  
+  #{item}  
+  </foreach>   
+  AND task_status IN
+  <foreach item="status" index="index" collection="task_status" open="(" separator="," close=")">  
+   #{status}  
+  </foreach> 
+</select>
+
+<select id="DataCenterBar" parameterType="java.util.Map" resultMap="BaseResultMap">
+ SELECT 
+  s.`realname` AS NAME,
+  s.`user_id`AS VALUE,
+   COUNT(task_id) AS VALUE_b
+  FROM company_staffer AS s
+  LEFT JOIN company_task AS t ON t.to_user=s.user_id
+  WHERE depart =#{dept_id}
+  AND task_status IN
+  <foreach item="status" index="index" collection="task_status" open="(" separator="," close=")">  
+   #{status}  
+  </foreach> 
+    GROUP BY s.`user_id`
+    ORDER BY  COUNT(task_id) DESC
+    LIMIT 10 OFFSET 0
+  </select>
+  <select id="DataCenterList" parameterType="java.util.Map" resultMap="BaseResultMap">
+ SELECT 
+  t.`task_title`  AS NAME,
+  t.`task_progress`AS VALUE
+  FROM company_staffer AS s
+  LEFT JOIN company_task AS t ON t.to_user=s.user_id
+  WHERE to_user=#{user_id}
+  AND task_status IN
+  <foreach item="status" index="index" collection="task_status" open="(" separator="," close=")">  
+   #{status}  
+  </foreach> 
+    LIMIT 10 OFFSET 0
+  </select>
+    <select id="getSonDept2" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  SELECT 
+  d.dept_id AS VALUE,
+  dept_name AS NAME, 
+ 0 AS value_b 
+ FROM company_depart AS d
+ LEFT JOIN  company_staffer AS s ON d.dept_id=s.depart
+ LEFT JOIN company_task AS t ON t.to_user=s.user_id
+ WHERE pid=#{dept_id}
+ AND isdelete = 1 AND d.STATUS = 1
+ GROUP BY dept_id
+  </select>
+  <!-- 旧版  -->
+  <select id="DataCenterLoop" parameterType="java.util.Map" resultMap="BaseResultMap">
+   SELECT 
+  d.dept_id as value,
+  dept_name as name, 
+  IFNULL(count(task_id),0) AS value_b 
+  FROM company_depart AS d
+ LEFT JOIN  company_staffer AS s ON d.dept_id=s.depart
+ LEFT JOIN company_task AS t ON t.to_user=s.user_id
+  WHERE d.dept_id IN 
+  <foreach item="item" index="index" collection="depts" open="(" separator="," close=")">  
+  #{item}  
+  </foreach>  
+  AND task_status IN
+  <foreach item="status" index="index" collection="task_status" open="(" separator="," close=")">  
+   #{status}  
+  </foreach> 
+ GROUP BY depart
+</select>
+<!-- 旧版 -->
+</mapper>

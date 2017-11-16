@@ -1,0 +1,20 @@
+[
+  {
+    "oi_type":"oi_enter_news_01",
+    "oi_type_id":12,
+    "news_title":"测试",
+    "news_post":"管理员",
+    "news_content":"1",
+    "news_status":"33306",
+    "news_time":"300"
+  },
+  {
+    "oi_type":"oi_enter_news_01",
+    "oi_type_id":12,
+    "news_title":"测试",
+    "news_post":"管理员",
+    "news_content":"1",
+    "news_status":"33306",
+    "news_time":"300"
+  }
+]

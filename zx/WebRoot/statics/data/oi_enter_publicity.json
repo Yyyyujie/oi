@@ -1,0 +1,22 @@
+[
+  {
+    "oi_type":"oi_enter_publicity",
+    "oi_type_id":12,
+    "pub_Title":"测试",
+    "pub_pic":"管理员",
+    "startDate":"1",
+    "endDate":"33306",
+    "pubStatus":"0",
+    "pubSort":"300"
+  },
+  {
+    "oi_type":"oi_enter_publicity",
+    "oi_type_id":12,
+    "pub_Title":"测试",
+    "pub_pic":"管理员",
+    "startDate":"1",
+    "endDate":"33306",
+    "pubStatus":"0",
+    "pubSort":"300"
+  }
+]

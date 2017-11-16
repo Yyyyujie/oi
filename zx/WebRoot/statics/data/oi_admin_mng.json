@@ -1,0 +1,18 @@
+[
+  {
+    "oi_type":"oi_admin_mng_table",
+    "oi_type_id":12,
+    "username":"1234",
+    "character":"超级管理员",
+    "email":"kemplaw@hotmail.com",
+    "phone":13000000000
+  },
+  {
+    "oi_type":"oi_admin_mng_table",
+    "oi_type_id":12,
+    "username":"1234",
+    "character":"超级管理员",
+    "email":"kemplaw@hotmail.com",
+    "phone":13000000000
+  }
+]

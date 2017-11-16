@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.zx.dao.WechatTmplMapper">
+  <resultMap id="BaseResultMap" type="cn.zx.pojo.WechatTmpl">
+    <id column="tmpl_id" jdbcType="INTEGER" property="tmpl_id" />
+    <result column="company_id" jdbcType="INTEGER" property="company_id" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="serial" jdbcType="VARCHAR" property="serial" />
+    <result column="template_id" jdbcType="VARCHAR" property="template_id" />
+    <result column="firstdata" jdbcType="VARCHAR" property="firstdata" />
+    <result column="keyword1" jdbcType="VARCHAR" property="keyword1" />
+    <result column="keyword2" jdbcType="VARCHAR" property="keyword2" />
+    <result column="keyword3" jdbcType="VARCHAR" property="keyword3" />
+    <result column="keyword4" jdbcType="VARCHAR" property="keyword4" />
+    <result column="keyword5" jdbcType="VARCHAR" property="keyword5" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="o" jdbcType="INTEGER" property="o" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="create_time" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="update_time" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    tmpl_id, company_id, type, title, serial, template_id, firstdata, keyword1, keyword2, 
+    keyword3, keyword4, keyword5, remark, o, status, create_time, update_time
+  </sql>
+  <select id="selectByExample" parameterType="cn.zx.pojo.WechatTmplExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from wechat_tmpl
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectWechatTmpl" resultType="WechatTmpl">
+  	SELECT tmpl_id,company_id,type,title,serial,template_id,firstdata,
+  	keyword1,keyword2,keyword3,keyword4,keyword5,remark,o,STATUS,create_time
+  	FROM wechat_tmpl
+  	<where>
+  		STATUS=1
+  		<if test="company_id != null">
+  			and company_id=#{company_id}
+  		</if>
+  		<if test="tmpl_id != null">
+  			and tmpl_id=#{tmpl_id}
+  		</if>
+  	</where>
+  	order by create_time desc
+  </select>
+  <update id="updateByPrimaryKeySelective" parameterType="java.util.List">
+    update wechat_tmpl
+    <set>
+      <if test="company_id != null">
+        company_id = #{company_id,jdbcType=INTEGER},
+      </if>
+      <if test="type != null">
+        type = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="serial != null">
+        serial = #{serial,jdbcType=VARCHAR},
+      </if>
+      <if test="template_id != null">
+        template_id = #{template_id,jdbcType=VARCHAR},
+      </if>
+      <if test="firstdata != null">
+        firstdata = #{firstdata,jdbcType=VARCHAR},
+      </if>
+      <if test="keyword1 != null">
+        keyword1 = #{keyword1,jdbcType=VARCHAR},
+      </if>
+      <if test="keyword2 != null">
+        keyword2 = #{keyword2,jdbcType=VARCHAR},
+      </if>
+      <if test="keyword3 != null">
+        keyword3 = #{keyword3,jdbcType=VARCHAR},
+      </if>
+      <if test="keyword4 != null">
+        keyword4 = #{keyword4,jdbcType=VARCHAR},
+      </if>
+      <if test="keyword5 != null">
+        keyword5 = #{keyword5,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="o != null">
+        o = #{o,jdbcType=INTEGER},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="create_time != null">
+        create_time = #{create_time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="update_time != null">
+        update_time = #{update_time,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where tmpl_id = #{tmpl_id,jdbcType=INTEGER}
+  </update>
+  <insert id="insertWechatTmpl" parameterType="WechatTmpl">
+  	INSERT INTO wechat_tmpl(company_id,TYPE,title,SERIAL,template_id,firstdata,
+  	keyword1,keyword2,keyword3,keyword4,keyword5,remark,o,STATUS,create_time)
+	VALUES
+	(#{company_id},#{type},#{title},#{serial},#{template_id},#{firstdata},
+	#{keyword1},#{keyword2},#{keyword3},#{keyword4},#{keyword5},#{remark},#{o},
+	#{status},#{create_time})
+  </insert>
+  <update id="updateBywechatTmpl" parameterType="WechatTmpl">
+  update wechat_tmpl set 
+	title = #{title}, 
+	SERIAL =  #{SERIAL}, 
+	firstdata =  #{firstdata}, 
+	keyword1 = #{keyword1}, 
+	keyword2 =  #{keyword2}, 
+	keyword3 =  #{keyword3}, 
+	keyword4 =  #{keyword4},  
+	keyword5 =  #{keyword5},  
+	remark =  #{remark},  
+	create_time =  #{create_time} , 
+	update_time =#{update_time}
+	
+	where tmpl_id=#{tmpl_id};
+  </update>
+</mapper>
