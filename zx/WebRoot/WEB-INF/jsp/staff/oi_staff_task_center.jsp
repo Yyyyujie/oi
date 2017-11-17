@@ -70,12 +70,20 @@ color:#777;
 }
 .__tsk_list{
 transform-style: preserve-3d;
+position:absolute;
 }
 .aui-list-view-cell{
-padding:0 0.146667rem
+padding:0 0.146667rem;
+overflow: unset;
+}
+.aui-list-view-cell:last-child:after,.aui-list-view-cell:after{
+border-bottom:0
 }
 .lisCon button,.lisCon .__tsk_btn_bg_df,.lisCon .__tsk_btn_bg_bl{
 	z-index:9999999;
+}
+.aui-swipe-right-btn{
+right:-0.05rem;
 }
 
 .__tsk_btn_bg_bl{

@@ -107,7 +107,7 @@ var userId = $(".userId").val();
 		})
 	}
 	function htmlTmp(html, data, task_status, buttonTpl, userHeader, isRes, receiveUrl) {
-		html += '<li class="__tsk_list aui-list-view-cell" data-type="' + isRes + '"><div class="liBox aui-swipe-handle">'
+		html += '<div class="box"><li class="__tsk_list aui-list-view-cell" data-type="' + isRes + '"><div class="liBox aui-swipe-handle">'
 			+ '<!--头像部分-->'
 			+ '<div class="__tsk_list_header _list_header"><div class="__list_header_inner" style="background-image:url(' + (userHeader ? userHeader : "statics/images/header/header_01.jpg") + ');">'
 			+ '</div>'
@@ -133,14 +133,14 @@ var userId = $(".userId").val();
 			+ '<div class="__tsk_status __t_s_ur ' + (data.task_urgent == 1 ? "_status_1" : "_status_2") + '"></div>'
 			+ '<!--重要状态-->'
 			+ '<div class="__tsk_status __t_s_im ' + (data.task_important == 1 ? "_status_1" : "_status_2") + '"></div>'
-			+ '</div>'
+			+ '</div><div class="done '+(task_status === 2 ? "show":"hide")+'"></div>'
 			+ '</a>'
 			+ '<!--按钮组合-->'
 			
 			+ '</div>'
 			+ '<!--按钮组合 结束-->'
 			+ '</div>'+buttonTpl+'</div>'
-			+ '</li>';
+			+ '</li></div>';
 		return html;
 		cosnsole.log($(".all").html())
 	}

@@ -128,14 +128,14 @@ body {
  */
 /*数据加载状态 结束*/
 .__tsk_list {
-	overflow: hidden;
+	/* overflow: hidden; */
   width: 9.36rem;
   height: 1.866667rem;
   padding: 0 0.146667rem;
   border-radius: 0.106667rem;
-  -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, .12);
-  box-shadow: 0 0 5px 2px rgba(0, 0, 0, .12);
-  margin: 0 auto 0.16rem;
+  /* -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, .12);
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, .12); */
+ /*  margin: 0 auto 0.16rem; */
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -149,6 +149,9 @@ body {
   -ms-flex-pack: start;
   justify-content: flex-start;
   -webkit-justify-content: flex-start;
+      position: absolute;
+    bottom: 0;
+      border: 1px solid #cccccc8a;
 }
 
 ._list_header {
@@ -316,7 +319,7 @@ body {
 .__tsk_status_container {
   position: absolute;
   /*top: 0.12rem;*/
-  top: 0;
+  top: -0.06rem;
   right: 0.146667rem;
 }
 
@@ -331,31 +334,38 @@ body {
   	display:none;
   	
 }
+.box{
+	    width: 9.35rem;
+    height: 1.9rem;
+    margin: 0 auto 0.16rem;
+    position: relative;
+    overflow: hidden;
+}
 
 /*紧急*/
 .__t_s_ur._status_1 {
 	display:block;
-  /* background-image: url(../images/icons/_status_urgency.png); */
-  background-color:#f00;
-  border-bottom:0.133334rem solid #fff;
+   background-image: url(../images/icons/_status_urgency.png); 
+  /* background-color:#f00; */
+  /* border-bottom:0.133334rem solid #fff;
   border-left:0.26666667rem solid #f00;
-  border-right:0.26666667rem solid #f00;
-  width:0.53333334rem;
-  height:0.6666667rem;
+  border-right:0.26666667rem solid #f00; */
+  width: 0.68rem;
+    height: 0.64rem;
 }
 
 /*重要*/
 .__t_s_im._status_1 {
 	display:block;
   background-image: url(../images/icons/_status_important.png);
-  background-color:#ff6600;
-  border-bottom:0.133334rem solid #fff;
+ /*  background-color:#ff6600; */
+  /* border-bottom:0.133334rem solid #fff;
   border-left:0.26666667rem solid #ff6600;
-  border-right:0.26666667rem solid #ff6600;
-  width:0.53333334rem;
-  height:0.6666667rem;
+  border-right:0.26666667rem solid #ff6600; */
+ width: 0.68rem;
+    height: 0.64rem;
 }
-.__t_s_im._status_1:after{
+/* .__t_s_im._status_1:after{
 	content:"重要";
 	position:absolute;
 	top:0;
@@ -365,8 +375,8 @@ body {
 	color:#fff;
 	text-align:center;
 	font-size: 0.28rem;
-}
-.__t_s_ur._status_1:after{
+} */
+/* .__t_s_ur._status_1:after{
 	content:"紧急";
 	position:absolute;
 	top:0;
@@ -377,7 +387,7 @@ body {
 	text-align:center;
 	font-size: 0.28rem;
 	
-}
+} */
 /*任务详情部分*/
 ._tsk_detail_container {
   position: relative;
@@ -1031,4 +1041,17 @@ li._s_on {
 	z-index: 999;
     transition-duration: 300ms;
     transform: translate3d(100%, 0px, 0px);
+}
+
+.done.show{
+	
+	    width: 1.933333rem;
+    height: 1.853333rem;
+    background: url(../images/icons/done.png);
+    position: absolute;
+    right: 0.7rem;
+    right: 0.3rem;
+    top: 0.05rem;
+    background-position: center;
+    background-size: contain;
 }

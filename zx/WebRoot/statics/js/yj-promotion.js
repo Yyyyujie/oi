@@ -14,7 +14,7 @@ function getLis(){
 			   console.log(data)
 			   if(data.length==0){
 				    var str="<p style='text-align: center; color: #ccc;'>暂无数据</p>";
-					$(".js").append(str);
+					$(".li-content").append(str);
 			   }else{
 			   for(var i=0;i<data.length;i++){
 				   var header=data[i].header;
